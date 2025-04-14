@@ -6,8 +6,6 @@ const app = express();
 // Habilitar CORS para todas las rutas
 app.use(cors());
 
-// O si quieres habilitar CORS solo para ciertas rutas
-// app.use('/posts', cors());
 
 app.listen(3001, () => {
   console.log('Servidor escuchando en el puerto 3001');
