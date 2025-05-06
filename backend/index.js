@@ -46,7 +46,7 @@ app.listen(3001, () => {
 app.post("/posts", async (req, res) => {
     try {
       const { titulo, img, descripcion } = req.body;
-      const likes = 0; // Cuando se crea un post nuevo, comienza con 0 likes
+      const likes = 0; 
   
       const result = await pool.query(
         "INSERT INTO posts (titulo, img, descripcion, likes) VALUES ($1, $2, $3, $4) RETURNING *",

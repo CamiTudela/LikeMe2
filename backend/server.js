@@ -3,7 +3,6 @@ const cors = require('cors');
 
 const app = express();
 
-// Habilitar CORS para todas las rutas
 app.use(cors());
 
 
@@ -28,7 +27,7 @@ client.connect()
   
     client.query(query)
       .then(result => {
-        res.json(result.rows);  // Devuelve los registros como respuesta JSON
+        res.json(result.rows); 
       })
       .catch(err => {
         console.error('Error al obtener los posts', err);
@@ -46,7 +45,7 @@ client.connect()
   
     client.query(query, [titulo, img, descripcion, likes])
       .then(result => {
-        res.json(result.rows[0]);  // Devuelve el nuevo post insertado
+        res.json(result.rows[0]);  
       })
       .catch(err => {
         console.error('Error al insertar el post', err);
